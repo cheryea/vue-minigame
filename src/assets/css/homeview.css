@@ -1,0 +1,17 @@
+.game-list {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+
+.game-list section img {
+    width: 100%;
+}
+
+@media screen and (min-width: 1366px) {
+    .game-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}

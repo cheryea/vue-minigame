@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <nav class="mobile-paddings">
+      <div class="display-flexs pc-widths">
+        <RouterLink to="/">
+          <p class="underlines">Minigame</p>
+        </RouterLink>
+        <p v-if="$route.name">></p>
+        <p v-if="$route.name">{{ $route.name }}</p>
+      </div>
+    </nav>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+console.log("path.1");
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+nav {
+  background: black;
+  color: #fff;
 }
 </style>
